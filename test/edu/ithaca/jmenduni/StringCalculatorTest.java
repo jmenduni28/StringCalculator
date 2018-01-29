@@ -14,8 +14,14 @@ class StringCalculatorTest {
    */
   @Test
   void addTest() {
-    assertEquals(StringCalculator.add(null), 0);
-    assertEquals(StringCalculator.add(""), 0);
+    StringCalculator stringCalculator = new StringCalculator();
+    assertEquals(0, stringCalculator.add(null));
+    assertEquals(0, stringCalculator.add(""));
+
+    assertEquals(0, stringCalculator.add("0"));
+    assertEquals(1, stringCalculator.add("1"));
+    assertEquals(5, stringCalculator.add("5"));
+    assertEquals(10, stringCalculator.add("10"));
   }
 
 }
