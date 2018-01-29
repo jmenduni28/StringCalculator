@@ -14,6 +14,7 @@ class StringCalculatorTest {
    */
   @Test
   void addTest() {
+    assertEquals(StringCalculator.add(null), 0);
     assertEquals(StringCalculator.add(""), 0);
   }
 

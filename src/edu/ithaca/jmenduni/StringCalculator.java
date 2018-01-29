@@ -5,7 +5,16 @@ package edu.ithaca.jmenduni;
  */
 public class StringCalculator {
 
+  /**
+   * Adds numbers in a string
+   * @param numbers - list of numbers, up to 2, which should be separated by commas
+   * @return sum of numbers in the input list, or 0 if the list is empty
+   */
   public static int add(String numbers) {
+    // if the string is null or empty, return 0
+    if (numbers == null || numbers.isEmpty()) {
+      return 0;
+    }
     return 1;
   }
 }
