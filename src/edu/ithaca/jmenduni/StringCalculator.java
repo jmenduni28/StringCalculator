@@ -11,10 +11,19 @@ public class StringCalculator {
    * @return sum of numbers in the input list, or 0 if the list is empty
    */
   public int add(String numbers) {
+    // if the string is empty, return 0
     if (numbers == null || numbers.isEmpty()) {
       return 0;
     }
-    else if (numbers.contains(",") || numbers.contains("\n")) {
+
+    // gets custom decimeter and replaces it with commas
+    if (numbers.startsWith("//")) {
+      String delimeter = numbers.substring(2).split("\n")[0];
+      numbers = numbers.replace("//" + delimeter + "\n", "");
+      numbers = numbers.replaceAll(delimeter, ",");
+    }
+
+    if (numbers.contains(",") || numbers.contains("\n")) {
       numbers = numbers.replaceAll("\n", ",");
       String[] strArray = numbers.split(",");
       int sum = 0;
