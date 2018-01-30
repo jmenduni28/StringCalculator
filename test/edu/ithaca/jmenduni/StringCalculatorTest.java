@@ -55,12 +55,21 @@ class StringCalculatorTest {
   @Test
   void testAddUnknownNums() {
     StringCalculator stringCalculator = new StringCalculator();
-    assertEquals(1, stringCalculator.add("1"));
-    assertEquals(3, stringCalculator.add("1,2"));
     assertEquals(6, stringCalculator.add("1,2,3"));
     assertEquals(15, stringCalculator.add("1,2,3,4,5"));
     assertEquals(29, stringCalculator.add("1,2,3,4,5,6,8"));
     assertEquals(45, stringCalculator.add("1,2,3,4,5,6,8,9,7"));
+  }
+
+  /**
+   * Tests the function to add numbers in a string with commas or newlines as delimiters
+   */
+  @Test
+  void testAddNewLines() {
+    StringCalculator stringCalculator = new StringCalculator();
+    assertEquals(3, stringCalculator.add("1\n2"));
+    assertEquals(6, stringCalculator.add("1\n2,3"));
+    assertEquals(6, stringCalculator.add("1\n2\n3"));
   }
 
 }
