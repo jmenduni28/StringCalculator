@@ -17,8 +17,9 @@ public class StringCalculator {
     else if (numbers.contains(",")) {
       String[] strArray = numbers.split(",");
       int sum = 0;
-      sum += Integer.parseInt(strArray[0]);
-      sum += Integer.parseInt(strArray[1]);
+      for (String str: strArray) {
+        sum += Integer.parseInt(str);
+      }
       return sum;
     }
     else {

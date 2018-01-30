@@ -53,7 +53,7 @@ class StringCalculatorTest {
    * Tests the function to add numbers in a string with an unknown amount of numbers
    */
   @Test
-  void testAddUnkownNums() {
+  void testAddUnknownNums() {
     StringCalculator stringCalculator = new StringCalculator();
     assertEquals(1, stringCalculator.add("1"));
     assertEquals(3, stringCalculator.add("1,2"));
