@@ -79,7 +79,7 @@ class StringCalculatorTest {
   }
 
   /**
-   * Tests the function to add numbers in a string with a custom delimiter
+   * Tests the function to add numbers in a string with a negative number, which should throw an exception
    */
   @Test
   void testNegativeException() {
