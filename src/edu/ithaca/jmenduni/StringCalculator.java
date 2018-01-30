@@ -14,6 +14,13 @@ public class StringCalculator {
     if (numbers == null || numbers.isEmpty()) {
       return 0;
     }
+    else if (numbers.contains(",")) {
+      String[] strArray = numbers.split(",");
+      int sum = 0;
+      sum += Integer.parseInt(strArray[0]);
+      sum += Integer.parseInt(strArray[1]);
+      return sum;
+    }
     else {
       return Integer.parseInt(numbers);
     }
