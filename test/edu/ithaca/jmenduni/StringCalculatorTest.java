@@ -1,7 +1,6 @@
 package edu.ithaca.jmenduni;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -10,14 +9,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class StringCalculatorTest {
 
   /**
-   * Tests the function to add numbers in a string
+   * Tests the function to add numbers in a string with an empty string
    */
   @Test
-  void addTest() {
+  void testAddEmpty() {
     StringCalculator stringCalculator = new StringCalculator();
     assertEquals(0, stringCalculator.add(null));
     assertEquals(0, stringCalculator.add(""));
+  }
 
+  /**
+   * Tests the function to add numbers in a string with one number
+   */
+  @Test
+  void testAddOneNum() {
+    StringCalculator stringCalculator = new StringCalculator();
     assertEquals(0, stringCalculator.add("0"));
     assertEquals(1, stringCalculator.add("1"));
     assertEquals(5, stringCalculator.add("5"));
