@@ -72,4 +72,14 @@ class StringCalculatorTest {
     assertEquals(6, stringCalculator.add("1\n2\n3"));
   }
 
+  /**
+   * Tests the function to add numbers in a string with a custom delimiter
+   */
+  @Test
+  void testAddCustomDelimiter() {
+    StringCalculator stringCalculator = new StringCalculator();
+    assertEquals(3, stringCalculator.add("//;\n1;2"));
+    assertEquals(10, stringCalculator.add("//%\n1%2%3%4"));
+  }
+
 }
