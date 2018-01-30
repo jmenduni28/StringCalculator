@@ -28,6 +28,25 @@ class StringCalculatorTest {
     assertEquals(1, stringCalculator.add("1"));
     assertEquals(5, stringCalculator.add("5"));
     assertEquals(10, stringCalculator.add("10"));
+    assertEquals(1000, stringCalculator.add("1000"));
+    assertEquals(-1, stringCalculator.add("-1"));
+    assertEquals(-100, stringCalculator.add("-100"));
+  }
+
+  /**
+   * Tests the function to add numbers in a string with two numbers
+   */
+  @Test
+  void testAddTwoNums() {
+    StringCalculator stringCalculator = new StringCalculator();
+    assertEquals(0, stringCalculator.add("0,0"));
+    assertEquals(1, stringCalculator.add("1,0"));
+    assertEquals(2, stringCalculator.add("1,1"));
+    assertEquals(15, stringCalculator.add("5,10"));
+    assertEquals(15, stringCalculator.add("10,5"));
+    assertEquals(5, stringCalculator.add("10,-5"));
+    assertEquals(5, stringCalculator.add("-5,10"));
+    assertEquals(-10, stringCalculator.add("-5,-5"));
   }
 
 }
