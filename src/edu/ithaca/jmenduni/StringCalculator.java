@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Created by joemenduni on 1/26/18.
+ 
  */
 public class StringCalculator {
 
@@ -20,6 +21,8 @@ public class StringCalculator {
     }
 
     // gets custom decimeter and replaces it with commas
+      
+    // look up built in functions for string iterator
     if (numbers.startsWith("//")) {
       String delimeter = numbers.substring(2).split("\n")[0];
       numbers = numbers.replace("//" + delimeter + "\n", "");
