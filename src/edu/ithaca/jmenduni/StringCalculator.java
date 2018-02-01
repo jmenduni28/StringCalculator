@@ -8,7 +8,7 @@ public class StringCalculator {
 
   /**
    * Adds numbers in a string
-   * @param numbers - list of numbers, up to 2, which should be separated by commas
+   * @param numbers - list of numbers, up to 2, which should be separated by commas or newlines
    * @return sum of numbers in the input list, or 0 if the list is empty
    */
   public int add(String numbers) {
@@ -18,7 +18,8 @@ public class StringCalculator {
     }
 
     // if there is more than 1 number
-    if (numbers.contains(",")) {
+    if (numbers.contains(",") || numbers.contains("\n")) {
+      numbers = numbers.replaceAll("\n", ",");
       // splits numbers into list
       String[] strArray = numbers.split(",");
       int sum = 0;
