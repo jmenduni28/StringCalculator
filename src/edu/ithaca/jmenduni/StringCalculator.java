@@ -18,7 +18,7 @@ public class StringCalculator {
     }
 
     // if there is more than 1 number
-      if (numbers.contains(",")) {
+    if (numbers.contains(",")) {
       // splits numbers into list
       String[] strArray = numbers.split(",");
       int sum = 0;
