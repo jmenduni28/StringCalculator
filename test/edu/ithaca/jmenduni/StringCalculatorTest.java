@@ -64,5 +64,18 @@ class StringCalculatorTest {
     assertEquals(-7, stringCalculator.add("-1,-2,-3,4,-5"));
   }
 
+  /**
+   * Tests the function to add numbers in a string with commas or newlines as delimiters
+   */
+  @Test
+  void testAddNewLines()  throws IllegalArgumentException {
+    StringCalculator stringCalculator = new StringCalculator();
+    assertEquals(3, stringCalculator.add("1\n2"));
+    assertEquals(6, stringCalculator.add("1\n2,3"));
+    assertEquals(6, stringCalculator.add("1\n2\n3"));
+    assertEquals(0, stringCalculator.add("1\n2\n-3\n0"));
+    assertEquals(-5, stringCalculator.add("-3\n-2"));
+  }
+
 
 }
