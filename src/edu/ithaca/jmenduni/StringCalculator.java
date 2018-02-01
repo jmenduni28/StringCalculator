@@ -17,10 +17,8 @@ public class StringCalculator {
       return 0;
     }
 
-    // gets custom decimeter and replaces it with commas
-
     // if there is more than 1 number
-      if (numbers.contains(",") || numbers.contains("\n")) {
+      if (numbers.contains(",")) {
       // splits numbers into list
       String[] strArray = numbers.split(",");
       int sum = 0;
